@@ -1,5 +1,18 @@
 body {
-  background-image: url(./images/field.jpg);
+  background-image: url("./images/field.jpg");
   background-size: cover;
   background-color: #739957;
+}
+
+.heading {
+  color: white;
+}
+
+.main-container {
+  display: flex;
+}
+
+.grid-container {
+  width: 1000px;
+  height: 1000px;
 }
