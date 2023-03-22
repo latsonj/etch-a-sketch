@@ -13,6 +13,10 @@ body {
 }
 
 .grid-container {
-  width: 1000px;
-  height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 0px auto;
 }
