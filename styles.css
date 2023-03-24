@@ -1,7 +1,5 @@
 body {
-  background-image: url("./images/field.jpg");
-  background-size: cover;
-  background-color: #739957;
+  background-image: linear-gradient(to bottom right, #9CBFDC, #8DC44D);
 }
 
 .heading {
@@ -19,4 +17,18 @@ body {
   height: 500px;
   border: 1px solid black;
   margin: 0px auto;
+}
+
+html {
+  min-height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.black-pen {
+  background-color: black;
 }
