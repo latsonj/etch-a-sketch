@@ -40,6 +40,10 @@ function changePenColor() {
   penColor = colorInput.value;
 }
 
+function erase() {
+  penColor = "#FFFFFF";
+}
+
 //Function for button resize
 function resizeGrid() {
   gridBlockXY = Math.floor(prompt("Enter a number between 1 - 100 to set easel size:"));
@@ -60,3 +64,4 @@ makeGridDrawable();
 //EventListeners
 resizeButton.addEventListener("click", resizeGrid);
 colorInput.addEventListener("input", changePenColor);
+eraser.addEventListener("click", erase);
