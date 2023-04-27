@@ -21,7 +21,7 @@ function createGrid() {
 }
 
 //Add color when mouse hovers
-let penColor = "black";
+let penColor = "#00FF7F";
 
 function drawOnGrid(event) {
   event.target.style.backgroundColor = penColor;
