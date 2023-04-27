@@ -1,6 +1,8 @@
 //Assigning names to selected elements from HTML
 const gridContainer = document.querySelector(".grid-container");
 const resizeButton = document.querySelector(".resize");
+const colorInput = document.querySelector("#color-picker");
+const eraser = document.querySelector(".eraser");
 
 //Create grid of 16x16 block of square divs
 let gridBlockXY = 16;
@@ -17,24 +19,26 @@ function createGrid() {
     i++;
   } while (i <= gridBlockXY * gridBlockXY);
 }
-createGrid();
 
-//EventListeners
-resizeButton.addEventListener("click", resizeGrid);
+//Add color when mouse hovers
+let penColor = "black";
 
-//Add class when mouse hovers(CSS has black for BG color)
-function changeColor(event) {
-  event.target.classList.add("black-pen");
+function drawOnGrid(event) {
+  event.target.style.backgroundColor = penColor;
 }
 
 //Add EventListeners to all squares via. loop
 function makeGridDrawable() {
   let gridDivArray = Array.from(document.querySelectorAll(".grid-div"));
   for (let items of gridDivArray) {
-    items.addEventListener("mouseover", changeColor);
+    items.addEventListener("mouseover", drawOnGrid);
   }
 }
-makeGridDrawable();
+
+//Function for color changing
+function changePenColor() {
+  penColor = colorInput.value;
+}
 
 //Function for button resize
 function resizeGrid() {
@@ -49,3 +53,10 @@ function resizeGrid() {
       alert(`Unable to resize`);
     }
 }
+
+createGrid();
+makeGridDrawable();
+
+//EventListeners
+resizeButton.addEventListener("click", resizeGrid);
+colorInput.addEventListener("input", changePenColor);
