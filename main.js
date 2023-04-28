@@ -3,45 +3,60 @@ const gridContainer = document.querySelector(".grid-container");
 const resizeButton = document.querySelector(".resize");
 const colorInput = document.querySelector("#color-picker");
 const eraser = document.querySelector(".eraser");
+const rainbow = document.querySelector(".rainbow");
 
 //Create grid of 16x16 block of square divs
-let gridBlockXY = 16;
+let gridBlockWidth = 16;
 function createGrid() {
   let i = 1;
-  gridContainer.setAttribute("style", "background-color: white;");
+  gridContainer.setAttribute("style", "background-color: linen;");
   const gridContainerPixelWidth = gridContainer.clientWidth; //clientWidth includes padding, excludes margin & border  
   do {
     let gridDiv = document.createElement("div");
     gridContainer.appendChild(gridDiv);
-    gridDiv.style.minWidth = `${gridContainerPixelWidth/gridBlockXY}px`;
-    gridDiv.style.minHeight = `${gridContainerPixelWidth/gridBlockXY}px`;
+    gridDiv.style.minWidth = `${gridContainerPixelWidth/gridBlockWidth}px`;
+    gridDiv.style.minHeight = `${gridContainerPixelWidth/gridBlockWidth}px`;
     gridDiv.classList.add("grid-div");
     i++;
-  } while (i <= gridBlockXY * gridBlockXY);
+  } while (i <= gridBlockWidth * gridBlockWidth);
 }
 
 //Add color when mouse hovers
 let penColor = "#00FF7F";
 
-function drawOnGrid(event) {
+function setDefaultPenFunctionality(event) {
   event.target.style.backgroundColor = penColor;
 }
 
 //Add EventListeners to all squares via. loop
-function makeGridDrawable() {
+function applyDefaultFunctionality() {
   let gridDivArray = Array.from(document.querySelectorAll(".grid-div"));
   for (let items of gridDivArray) {
-    items.addEventListener("mouseover", drawOnGrid);
+    items.addEventListener("mouseover", setDefaultPenFunctionality);
+    items.removeEventListener("mouseover", setRainbowPen);
   }
 }
 
-//Function for color changing
+//Functions for color changing
 function changePenColor() {
   penColor = colorInput.value;
+  applyDefaultFunctionality();
 }
 
 function erase() {
-  penColor = "#FFFFFF";
+  penColor = "#FAF0E6";
+  applyDefaultFunctionality();
+}
+
+function setRainbowPen(){
+  penColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
+}
+
+function applyRainbowPenFunctionality() {
+  let gridDivArray = Array.from(document.querySelectorAll(".grid-div"));
+  for (let items of gridDivArray) {
+    items.addEventListener("mouseover", setRainbowPen);
+  }
 }
 
 //Function for button resize
@@ -59,9 +74,10 @@ function resizeGrid() {
 }
 
 createGrid();
-makeGridDrawable();
+applyDefaultFunctionality();
 
 //EventListeners
 resizeButton.addEventListener("click", resizeGrid);
 colorInput.addEventListener("input", changePenColor);
 eraser.addEventListener("click", erase);
+rainbow.addEventListener("click", applyRainbowPenFunctionality);
