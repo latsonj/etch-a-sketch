@@ -70,6 +70,8 @@ function resizeGrid() {
         if (penColor.includes("rgb")) {
           applyBaselineFunctionality();
           applyRandomPenFunctionality();
+        } else {
+          applyBaselineFunctionality();
         }
     } else {
       alert(`Unable to resize`);
