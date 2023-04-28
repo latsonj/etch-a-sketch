@@ -2,8 +2,8 @@
 const gridContainer = document.querySelector(".grid-container");
 const resizeButton = document.querySelector(".resize");
 const colorInput = document.querySelector("#color-picker");
-const eraser = document.querySelector(".eraser");
-const rainbow = document.querySelector(".rainbow");
+const eraserButton = document.querySelector(".eraser");
+const randomButton = document.querySelector(".random");
 
 //Create grid of 16x16 block of square divs
 let gridBlockWidth = 16;
@@ -29,55 +29,58 @@ function setDefaultPenFunctionality(event) {
 }
 
 //Add EventListeners to all squares via. loop
-function applyDefaultFunctionality() {
+function applyBaselineFunctionality() {
   let gridDivArray = Array.from(document.querySelectorAll(".grid-div"));
   for (let items of gridDivArray) {
     items.addEventListener("mouseover", setDefaultPenFunctionality);
-    items.removeEventListener("mouseover", setRainbowPen);
+    items.removeEventListener("mouseover", setRandomPen);
   }
 }
 
 //Functions for color changing
 function changePenColor() {
   penColor = colorInput.value;
-  applyDefaultFunctionality();
+  applyBaselineFunctionality();
 }
 
 function erase() {
   penColor = "#FAF0E6";
-  applyDefaultFunctionality();
+  applyBaselineFunctionality();
 }
 
-function setRainbowPen(){
+function setRandomPen(){
   penColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
 }
 
-function applyRainbowPenFunctionality() {
+function applyRandomPenFunctionality() {
   let gridDivArray = Array.from(document.querySelectorAll(".grid-div"));
   for (let items of gridDivArray) {
-    items.addEventListener("mouseover", setRainbowPen);
+    items.addEventListener("mouseover", setRandomPen);
   }
 }
 
 //Function for button resize
 function resizeGrid() {
-  gridBlockXY = Math.floor(prompt("Enter a number between 1 - 100 to set easel size:"));
+  gridBlockWidth = Math.floor(prompt("Enter a number between 1 - 100 to set easel size:"));
 
-    if (gridBlockXY > 0 && gridBlockXY < 101) {
+    if (gridBlockWidth > 0 && gridBlockWidth < 101) {
       gridContainer.querySelectorAll('*').forEach(gridDiv => gridDiv.remove()); //Googled how to remove all children elements
       createGrid();
-      alert(`Size set to ${gridBlockXY} x ${gridBlockXY}`);
-      makeGridDrawable();
+      alert(`Size set to ${gridBlockWidth} x ${gridBlockWidth}`);
+        if (penColor.includes("rgb")) {
+          applyBaselineFunctionality();
+          applyRandomPenFunctionality();
+        }
     } else {
       alert(`Unable to resize`);
     }
 }
 
 createGrid();
-applyDefaultFunctionality();
+applyBaselineFunctionality();
 
 //EventListeners
 resizeButton.addEventListener("click", resizeGrid);
 colorInput.addEventListener("input", changePenColor);
-eraser.addEventListener("click", erase);
-rainbow.addEventListener("click", applyRainbowPenFunctionality);
+eraserButton.addEventListener("click", erase);
+randomButton.addEventListener("click", applyRandomPenFunctionality);
