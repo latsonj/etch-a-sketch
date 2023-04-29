@@ -4,6 +4,7 @@ const resizeButton = document.querySelector(".resize");
 const colorInput = document.querySelector("#color-picker");
 const eraserButton = document.querySelector(".eraser");
 const randomButton = document.querySelector(".random");
+const clearButton = document.querySelector(".clear");
 
 //Create grid of 16x16 block of square divs
 let gridBlockWidth = 16;
@@ -59,6 +60,13 @@ function applyRandomPenFunctionality() {
   }
 }
 
+function clear() {
+  let gridDivArray = Array.from(document.querySelectorAll(".grid-div"));
+  for (let items of gridDivArray) {
+    items.style.backgroundColor = "linen";
+  }
+}
+
 //Function for button resize
 function resizeGrid() {
   gridBlockWidth = Math.floor(prompt("Enter a number between 1 - 100 to set easel size:"));
@@ -86,3 +94,4 @@ resizeButton.addEventListener("click", resizeGrid);
 colorInput.addEventListener("input", changePenColor);
 eraserButton.addEventListener("click", erase);
 randomButton.addEventListener("click", applyRandomPenFunctionality);
+clearButton.addEventListener("click", clear);
