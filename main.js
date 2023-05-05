@@ -81,20 +81,21 @@ function clearGrid() {
 function setGrayscalePen(event) {
   let alpha = event.target.style.backgroundColor.substring(14, 17);
   let alphaIncrement = event.target.style.backgroundColor.substring(16, 17);
+  let background = event.target.style.backgroundColor;
 
-  if (event.target.style.backgroundColor.includes("(0, 0, 0)" || "#FFFFFF")) { //To prevent line 88 behavior (line 96 browser removes "a" from "rgba")
+  if (background.includes("(0, 0, 0)" || "#FFFFFF")) { //To prevent line 89 behavior (line 97 browser removes "a" from "rgba")
     return;
 
-  } else if (!event.target.style.backgroundColor.includes("rgba")) { //Initialize value
+  } else if (!background.includes("rgba")) { //Initialize value
     event.target.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
 
-  } else if (event.target.style.backgroundColor.includes("rgba")){ //Where the magic happens, increments the decimal alpha value
+  } else if (background.includes("rgba")){ //Where the magic happens, increments the decimal alpha value
 
     if (alpha < 0.9) {
-      event.target.style.backgroundColor = event.target.style.backgroundColor.replace(alphaIncrement, ++alphaIncrement);
+      event.target.style.backgroundColor = background.replace(alphaIncrement, ++alphaIncrement);
 
     } else if (alpha >= 0.9) {
-      event.target.style.backgroundColor = event.target.style.backgroundColor.replace(alpha, 1.0); //Makes background color show as rgb(0, 0, 0) ^ line 85
+      event.target.style.backgroundColor = background.replace(alpha, 1.0); //Makes background color show as rgb(0, 0, 0) ^ line 86
     }
   }
 }
