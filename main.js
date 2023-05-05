@@ -82,7 +82,7 @@ function setGrayscalePen(event) {
   let alpha = event.target.style.backgroundColor.substring(14, 17);
   let alphaIncrement = event.target.style.backgroundColor.substring(16, 17);
 
-  if (event.target.style.backgroundColor.includes("(0, 0, 0)" || "#FFFFFF")) { //To prevent line 84 behavior (line 92 browser removes "a" from "rgba")
+  if (event.target.style.backgroundColor.includes("(0, 0, 0)" || "#FFFFFF")) { //To prevent line 88 behavior (line 96 browser removes "a" from "rgba")
     return;
 
   } else if (!event.target.style.backgroundColor.includes("rgba")) { //Initialize value
@@ -94,7 +94,7 @@ function setGrayscalePen(event) {
       event.target.style.backgroundColor = event.target.style.backgroundColor.replace(alphaIncrement, ++alphaIncrement);
 
     } else if (alpha >= 0.9) {
-      event.target.style.backgroundColor = event.target.style.backgroundColor.replace(alpha, 1.0); //Makes background color show as rgb(0, 0, 0) ^ line 81
+      event.target.style.backgroundColor = event.target.style.backgroundColor.replace(alpha, 1.0); //Makes background color show as rgb(0, 0, 0) ^ line 85
     }
   }
 }
