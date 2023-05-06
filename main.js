@@ -113,7 +113,7 @@ function applyGrayscalePenFunctionality() {
 }
 
 function resizeGrid() {
-  gridBlockWidth = Math.floor(prompt("Enter a number between 1 - 100 to set easel size:"));
+  gridBlockWidth = Math.floor(prompt("Enter a number between 1 - 100 to set grid size:"));
 
     if (gridBlockWidth > 0 && gridBlockWidth < 101) {
       gridContainer.querySelectorAll('*').forEach(gridDiv => gridDiv.remove()); //Googled how to remove all children elements
