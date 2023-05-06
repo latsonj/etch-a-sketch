@@ -3,11 +3,14 @@ body {
 }
 
 .heading {
-  color: white;
+  font-size: 48px;
+  margin: 1em 0px 2em 0px;
 }
 
-.main-container {
-  display: flex;
+.text {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
 }
 
 .grid-container {
@@ -15,13 +18,69 @@ body {
   flex-wrap: wrap;
   width: 500px;
   height: 500px;
-  border: 1px solid black;
-  margin: 0px auto;
+  border: 5px solid black;
+  margin-right: 35%;
+  flex-shrink: 0;
+}
+
+.main-container {
+  display: flex;
+  column-gap: 10em;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 0px 0px auto;
+  padding: 0px 3em 1em;
+  row-gap: 0.75em;
+  background-color: lightblue;
+  border-radius: 15px;
+  height: 400px;
+}
+
+.buttons {
+  background-color: #D2691E;
+  border: 0px;
+  font-size: 18px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#color-picker {
+  align-self: center;
+}
+
+#color-picker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+}
+#color-picker::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 7px solid gray;
+}
+#color-picker::-moz-color-swatch {
+  border-radius: 50%;
+  border: 7px solid gray;
+}
+
+.resize {
+  background-color: #b76E79;
 }
 
 html {
   min-height: 100%;
 }
+
 body {
   height: 100%;
   margin: 0;

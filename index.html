@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <script src="./main.js" defer></script>
     <title>Etch-A-Sketch</title>
   </head>
@@ -14,19 +17,18 @@
 
     <div class="main-container container section">
 
-      <div class="menu menu-list div-item"></div>
-        <input type="color" id="color-picker" value="#00FF7F"><label class="text" for="color-picker">Color Picker</label>
-        <button class="buttons menu-item eraser">Eraser</button>
-        <button class="buttons menu-item random">Random</button>
-        <button class="buttons menu-item grayscale">Grayscale</button>
-        <button class="buttons menu-item clear">Clear</button>
-        <button class="buttons menu-item resize">Resize</button>
-
+      <div class="menu menu-list div-item">
+        <input type="color" id="color-picker" value="#00FF7F"><label class="text buttons" for="color-picker">Color Picker</label>
+        <button class="buttons menu-item eraser text">Eraser</button>
+        <button class="buttons menu-item random text">Random</button>
+        <button class="buttons menu-item grayscale text">Grayscale</button>
+        <button class="buttons menu-item clear text">Clear</button>
+        <button class="buttons menu-item resize text">Resize</button>
+      </div>
       <div class="grid-container div-item">
         
       </div>
     </div>
-
     <footer></footer>
   </body>
 </html>
