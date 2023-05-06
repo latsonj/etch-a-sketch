@@ -5,6 +5,7 @@ const eraserButton = document.querySelector(".eraser");
 const randomButton = document.querySelector(".random");
 const clearButton = document.querySelector(".clear");
 const grayscaleButton = document.querySelector(".grayscale");
+const label = document.querySelector("label");
 
 //Create grid of 16x16 block of square divs
 let gridBlockWidth = 16;
@@ -41,18 +42,27 @@ function applyBaselineFunctionality() {
     items.removeEventListener("mouseover", setRandomPen); //Removes randomPen Color, sets input/erase as penColor, penColor fires event
     items.removeEventListener("mouseover", setGrayscalePen); //Removes grayscale behavior;
   }
+  label.classList.add("active-highlight");
 }
 
 //Sets penColor as input, removes randomPen & grayscale
 function changePenColor() {
   penColor = colorInput.value; //Set penColor -> input color selector
   applyBaselineFunctionality();
+  label.classList.add("active-highlight");
+  eraserButton.classList.remove("active-highlight");
+  randomButton.classList.remove("active-highlight");
+  grayscaleButton.classList.remove("active-highlight");
 }
 
 //Sets penColor as white, removes randomPen & grayscale
 function erase() {
   penColor = "#FFFFFF";
   applyBaselineFunctionality();
+  eraserButton.classList.add("active-highlight");
+  label.classList.remove("active-highlight");
+  randomButton.classList.remove("active-highlight");
+  grayscaleButton.classList.remove("active-highlight");
 }
 
 //Sets penColor as random, every new mouseover fires random function for each rgb value
@@ -68,6 +78,10 @@ function applyRandomPenFunctionality() {
     items.addEventListener("mouseover", setRandomPen); //penColor = randomPen
     items.removeEventListener("mouseover", setGrayscalePen); //Removes grayscale behavior
   }
+  randomButton.classList.add("active-highlight");
+  label.classList.remove("active-highlight");
+  eraserButton.classList.remove("active-highlight");
+  grayscaleButton.classList.remove("active-highlight");
 }
 
 function clearGrid() {
@@ -110,6 +124,10 @@ function applyGrayscalePenFunctionality() {
     items.removeEventListener("mouseover", setRandomPen);
     items.removeEventListener("mouseover", setDefaultPenFunctionality);
   }
+  grayscaleButton.classList.add("active-highlight");
+  label.classList.remove("active-highlight");
+  randomButton.classList.remove("active-highlight");
+  eraserButton.classList.remove("active-highlight");
 }
 
 function resizeGrid() {

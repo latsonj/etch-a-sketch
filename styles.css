@@ -77,6 +77,31 @@ body {
   background-color: #b76E79;
 }
 
+.buttons.resize:hover {
+  color: #b76E79;
+  background-color: white;
+}
+
+.buttons.resize:active {
+  color: #b76E79;
+  background-color: white;
+}
+
+.buttons:hover {
+  background-color: white;
+  color: #D2691E;
+}
+
+.buttons:active {
+  background-color: white;
+  color: #D2691E;
+}
+
+.active-highlight {
+  background-color: white;
+  color: #D2691E;
+}
+
 html {
   min-height: 100%;
 }
