@@ -6,6 +6,7 @@ const randomButton = document.querySelector(".random");
 const clearButton = document.querySelector(".clear");
 const grayscaleButton = document.querySelector(".grayscale");
 const label = document.querySelector("label");
+const sizeIndicator = document.querySelector(".size-indicator");
 
 //Create grid of 16x16 block of square divs
 let gridBlockWidth = 16;
@@ -137,6 +138,7 @@ function resizeGrid() {
       gridContainer.querySelectorAll('*').forEach(gridDiv => gridDiv.remove()); //Googled how to remove all children elements
       createGrid();
       alert(`Size set to ${gridBlockWidth} x ${gridBlockWidth}`);
+      sizeIndicator.textContent = `${gridBlockWidth} x ${gridBlockWidth}`;
       
         if (penColor.includes("rgb")) {
           applyBaselineFunctionality(); //Make grid able to be drawn on since this function deletes all squares and creates new ones

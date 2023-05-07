@@ -13,6 +13,10 @@ body {
   text-align: center;
 }
 
+.size-indicator {
+  color: black;
+}
+
 .grid-container {
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +38,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0px 0px 0px auto;
-  padding: 0px 3em 1em;
+  padding: 1em 3em 1em;
   row-gap: 0.75em;
   background-color: lightblue;
   border-radius: 15px;
