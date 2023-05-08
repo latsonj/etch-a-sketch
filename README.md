@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-A simple webpage that mimics an etch-a-sketch and can be used for pixel art. This project was built for personal learning from The Odin Project [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
+A simple webpage that mimics an etch-a-sketch. This project was built for personal learning from The Odin Project [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
 
 My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
@@ -12,19 +12,19 @@ My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
 ## Screenshots
 
-  <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="400px"/> <img src="./images/READMEdemo2.png" alt="Screenshot of live demo, Pacman pixel art" width="400px"/>
+  <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="400px"/> <img src="./images/READMEcat" alt="Screenshot of live demo - cat pixel art" height="242.5"/>
 
-## Learning
+## Learning Observations
 
-Making this project solidified the concepts of **DOM Manipulation** and **Event listeners** since every button press and mouse hover will trigger a slightly different functionality on the page and how the page is manipulated.
+Making this project solidified the concepts of **DOM Manipulation** and **Event listeners** since every button press and mouse hover triggers slightly different functionality. I had to make sure the functions did not interfere with each other, the correct parts of the document were being manipulated, and events were added and removed correctly.
 
-The page meets all the project requirements. It also helped reinforce concepts from previous projects which were heavily **HTML** and **CSS** focused.
+This project also allowed me to practice and reinforce concepts from previous projects which were heavily **HTML** and **CSS** focused.
 
-Making the extra credit *Grayscale* part was challenging, since I was trying to figure out how to reduce repetition on that particular function. Initially, I wrote every possibility down and it worked but it was a clumsy approach. Later, I figured out how to use substring methods and conditionals to make every pass 10% darker thus reducing the amount of repetitive code and adding to readability.
+Making the **grayscale** extra credit part was challenging, since I was trying to figure out how to reduce repetition on that particular function. Initially, I wrote every possibility down and even though it worked, it was a clumsy approach. Later, I figured out how to use substring methods and conditionals to make every pass 10% darker thus reducing the amount of repetitive code and adding to its readability.
 
-Overall, I am satisfied with this project, but I can still work on reducing repetitiveness of code as a whole.
+Overall, I am satisfied with this project, but I can still work on reducing the repetitiveness of my code as a whole.
 
-## Potential Future Improvements
+## Potential To-Dos
 
   - Click and drag drawing functionality
 
