@@ -6,9 +6,9 @@ My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
 ## Technologies used
 
- - HTML5
- - CSS3
- - **Vanilla** JS
+ - **HTML5**
+ - **CSS3**
+ - **Vanilla JS**
 
 ## Screenshots
 
@@ -27,7 +27,9 @@ Overall, I am satisfied with this project, but I can still work on reducing repe
 ## Potential Future Improvements
 
   - Click and drag drawing functionality
+
   - Slider for resizing grid replacing prompt
+
   - General styling (I initially wanted to add an easel shape around the grid)
 
 ## Attributions
