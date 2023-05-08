@@ -12,8 +12,8 @@ My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
 ## Screenshots
 
-  <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="100px"/>
-  <img src="./images/READMEdemo2.png" alt="Screenshot of live demo, Pacman pixel art" width="100px"/>
+  <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="250px"/>
+  <img src="./images/READMEdemo2.png" alt="Screenshot of live demo, Pacman pixel art" width="250px"/>
 
 ## Learning
 
@@ -49,4 +49,4 @@ This project was created with fonts and images from:
 
 ## Author
 
-Created by [latsonj](https://github.com/latsonj) [![Github logo](./images/github-mark.png)](https://github.com/latsonj)
+Created by [latsonj](https://github.com/latsonj)
