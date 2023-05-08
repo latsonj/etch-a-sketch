@@ -12,8 +12,8 @@ My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
 ## Screenshots
 
-  <img src="./images/READMEdemo1" alt="Screenshot of live demo Etch-a-sketch page" width="100px">
-  <img src="./images/READMEdemo2" alt="Screenshot of live demo, Pacman pixel art" width="100px">
+  <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="100px"/>
+  <img src="./images/READMEdemo2.png" alt="Screenshot of live demo, Pacman pixel art" width="100px"/>
 
 ## Learning
 
