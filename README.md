@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-A simple webpage that mimics an etch-a-sketch. This project was built for personal learning from The Odin Project [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
+A simple webpage that mimics an etch-a-sketch. This project was built for personal learning from **The Odin Project** [curriculum](https://www.theodinproject.com/lessons/foundations-etch-a-sketch).
 
 My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
