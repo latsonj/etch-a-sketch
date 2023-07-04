@@ -4,17 +4,17 @@ A simple webpage that mimics an etch-a-sketch. This project was built for person
 
 My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
-## Technologies used
+## 🛠️ Technologies used
 
  - **HTML5**
  - **CSS3**
  - **Vanilla JS**
 
-## Screenshots
+## 📷 Screenshots
 
   <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="400px"/> <img src="./images/READMEcat.png" alt="Screenshot of live demo - cat pixel art" height="242.5"/>
 
-## Learning Observations
+## 📝 Learning Observations
 
 Making this project solidified the concepts of **DOM Manipulation** and **Event listeners** since every button press and mouse hover triggers slightly different functionality. I had to make sure the functions did not interfere with each other, the correct parts of the document were being manipulated, and events were added and removed correctly.
 
@@ -48,6 +48,6 @@ This project was created with fonts and images from:
  - [Google Fonts (Rubik)](https://fonts.google.com/)
  - [Easel icons created by Graficon - Flaticon](https://www.flaticon.com/free-icons/easel)
 
-## Author
+## 👤 Author
 
 Created by [latsonj](https://github.com/latsonj)
