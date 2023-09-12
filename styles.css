@@ -84,17 +84,14 @@ body {
 }
 
 .resize {
-  background-color: #b76E79;
+  color: firebrick;
+  font-size: 1.2rem;
+  padding-top: 1em;
+  border-top: 3px solid #D2691E;
 }
 
-.buttons.resize:hover {
-  color: #b76E79;
-  background-color: white;
-}
-
-.buttons.resize:active {
-  color: #b76E79;
-  background-color: white;
+.slider {
+  padding: 0;
 }
 
 .buttons:hover {
@@ -103,8 +100,8 @@ body {
 }
 
 .buttons:active {
-  background-color: white;
-  color: #D2691E;
+  background-color: #EEEEEE;
+  color: teal;
 }
 
 .active-highlight {
