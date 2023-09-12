@@ -5,7 +5,7 @@ const eraserButton = document.querySelector(".eraser");
 const randomButton = document.querySelector(".random");
 const clearButton = document.querySelector(".clear");
 const grayscaleButton = document.querySelector(".grayscale");
-const label = document.querySelector("label");
+const colorLabel = document.querySelector(`label[for="color-picker"]`);
 const sizeIndicator = document.querySelector(".size-indicator");
 
 //Create grid of 16x16 block of square divs
@@ -43,14 +43,14 @@ function applyBaselineFunctionality() {
     items.removeEventListener("mouseover", setRandomPen); //Removes randomPen Color, sets input/erase as penColor, penColor fires event
     items.removeEventListener("mouseover", setGrayscalePen); //Removes grayscale behavior;
   }
-  label.classList.add("active-highlight");
+  colorLabel.classList.add("active-highlight");
 }
 
 //Sets penColor as input, removes randomPen & grayscale
 function changePenColor() {
   penColor = colorInput.value; //Set penColor -> input color selector
   applyBaselineFunctionality();
-  label.classList.add("active-highlight");
+  colorLabel.classList.add("active-highlight");
   eraserButton.classList.remove("active-highlight");
   randomButton.classList.remove("active-highlight");
   grayscaleButton.classList.remove("active-highlight");
@@ -61,7 +61,7 @@ function erase() {
   penColor = "#FFFFFF";
   applyBaselineFunctionality();
   eraserButton.classList.add("active-highlight");
-  label.classList.remove("active-highlight");
+  colorLabel.classList.remove("active-highlight");
   randomButton.classList.remove("active-highlight");
   grayscaleButton.classList.remove("active-highlight");
 }
@@ -80,7 +80,7 @@ function applyRandomPenFunctionality() {
     items.removeEventListener("mouseover", setGrayscalePen); //Removes grayscale behavior
   }
   randomButton.classList.add("active-highlight");
-  label.classList.remove("active-highlight");
+  colorLabel.classList.remove("active-highlight");
   eraserButton.classList.remove("active-highlight");
   grayscaleButton.classList.remove("active-highlight");
 }
@@ -126,7 +126,7 @@ function applyGrayscalePenFunctionality() {
     items.removeEventListener("mouseover", setDefaultPenFunctionality);
   }
   grayscaleButton.classList.add("active-highlight");
-  label.classList.remove("active-highlight");
+  colorLabel.classList.remove("active-highlight");
   randomButton.classList.remove("active-highlight");
   eraserButton.classList.remove("active-highlight");
 }
