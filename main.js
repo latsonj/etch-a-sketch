@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
-const resizeButton = document.querySelector(".resize");
+const resizeSlider = document.querySelector(".resize");
 const colorInput = document.querySelector("#color-picker");
 const eraserButton = document.querySelector(".eraser");
 const randomButton = document.querySelector(".random");
@@ -132,13 +132,14 @@ function applyGrayscalePenFunctionality() {
 }
 
 function resizeGrid() {
-  gridBlockWidth = Math.floor(prompt("Enter a number between 1 - 100 to set grid size:"));
-
-    if (gridBlockWidth > 0 && gridBlockWidth < 101) {
+  gridBlockWidth = resizeSlider.value;
       gridContainer.querySelectorAll('*').forEach(gridDiv => gridDiv.remove()); //Googled how to remove all children elements
       createGrid();
-      alert(`Size set to ${gridBlockWidth} x ${gridBlockWidth}`);
       sizeIndicator.textContent = `${gridBlockWidth} x ${gridBlockWidth}`;
+
+      //No need for nested conditional now?
+      //Add output changing, could keep class/ID but just change HTML tag
+      //Keep bottom here
       
         if (penColor.includes("rgb")) {
           applyBaselineFunctionality(); //Make grid able to be drawn on since this function deletes all squares and creates new ones
@@ -150,17 +151,14 @@ function resizeGrid() {
         } else {
           applyBaselineFunctionality(); //Everything else other that random and grayscale
         }
-    
-      } else {
-      alert(`Unable to resize`);
-    }
+
 }
 
 createGrid();
 applyBaselineFunctionality();
 
 //EventListeners
-resizeButton.addEventListener("click", resizeGrid);
+resizeSlider.addEventListener("input", resizeGrid);
 colorInput.addEventListener("input", changePenColor);
 eraserButton.addEventListener("click", erase);
 randomButton.addEventListener("click", applyRandomPenFunctionality);
