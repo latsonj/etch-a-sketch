@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector(".grid-container");
-const resizeSlider = document.querySelector(".resize");
+const resizeSlider = document.querySelector(".slider");
 const colorInput = document.querySelector("#color-picker");
 const eraserButton = document.querySelector(".eraser");
 const randomButton = document.querySelector(".random");
