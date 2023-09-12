@@ -28,9 +28,9 @@ Overall, I am satisfied with this project, but I can still work on reducing the 
 
   - Click and drag drawing functionality
 
-  - Slider for resizing grid replacing prompt
+  ~- Slider for resizing grid replacing prompt~ ✓
 
-  - General styling (I initially wanted to add an easel shape around the grid)
+  ~- General styling (I initially wanted to add an easel shape around the grid)~ ✓
 
 ## Attributions
 
