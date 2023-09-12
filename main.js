@@ -136,10 +136,6 @@ function resizeGrid() {
       gridContainer.querySelectorAll('*').forEach(gridDiv => gridDiv.remove()); //Googled how to remove all children elements
       createGrid();
       sizeIndicator.textContent = `${gridBlockWidth} x ${gridBlockWidth}`;
-
-      //No need for nested conditional now?
-      //Add output changing, could keep class/ID but just change HTML tag
-      //Keep bottom here
       
         if (penColor.includes("rgb")) {
           applyBaselineFunctionality(); //Make grid able to be drawn on since this function deletes all squares and creates new ones
@@ -150,6 +146,7 @@ function resizeGrid() {
         
         } else {
           applyBaselineFunctionality(); //Everything else other that random and grayscale
+          changePenColor();
         }
 
 }
