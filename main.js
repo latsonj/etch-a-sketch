@@ -20,6 +20,8 @@ function createGrid() {
     let gridDiv = document.createElement("div");
     gridContainer.appendChild(gridDiv);
 
+    gridDiv.style.boxSizing = "border-box";
+    gridDiv.style.border = "1px solid gainsboro";
     gridDiv.style.minWidth = `${gridContainerPixelWidth/gridBlockWidth}px`;
     gridDiv.style.minHeight = `${gridContainerPixelWidth/gridBlockWidth}px`;
     gridDiv.classList.add("grid-div");
