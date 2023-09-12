@@ -12,7 +12,7 @@ My **live demo** can be found [here](https://latsonj.github.io/etch-a-sketch/).
 
 ## 📷 Screenshots
 
-  <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="400px"/> <img src="./images/READMEcat.png" alt="Screenshot of live demo - cat pixel art" height="242.5"/>
+  <img src="./images/READMEdemo1.png" alt="Screenshot of live demo Etch-a-sketch page" width="400px"/> <img src="./images/smiley.png" alt="Screenshot of live demo - smiley face with sunglasses" height="242.5"/>
 
 ## 📝 Learning Observations
 
